@@ -5,9 +5,11 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import LoginView, LogoutView
+from requests import request
 from ProyectoApp.models import BlogModel
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest
 
 
 
@@ -64,7 +66,8 @@ class BlogLogin(LoginView):
 class BlogLogout(LogoutView):
     template_name = 'blog/blog_logout.html'
 
-
-
+def index(request):
+    if request.method == "GET":
+        return render(request, 'home.html')
 
 
