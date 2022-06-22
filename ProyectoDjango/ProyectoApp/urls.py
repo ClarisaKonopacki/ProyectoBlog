@@ -1,6 +1,6 @@
 
 from django.urls import path
-#from ProyectoApp.views import BlogList, BlogDetail, BlogCreate, BlogLogin, BlogLogout, BlogUpdate
+from ProyectoApp.views import BlogList, BlogDetail, BlogCreate, BlogLogin, BlogLogout, BlogUpdate
 from ProyectoApp import views
 
 
