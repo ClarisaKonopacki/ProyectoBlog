@@ -16,13 +16,13 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadReque
 class BlogList(ListView):
 
     model = BlogModel
-    template_name = "blog/blog_list.html"
+    template_name = "blog_list.html"
 
 
 class BlogDetail(DetailView):
 
     model = BlogModel
-    template_name = "blog/blog_detail.html"
+    template_name = "blog_detail.html"
 
 
 class BlogCreate(LoginRequiredMixin, CreateView):
@@ -59,12 +59,12 @@ class BlogDelete(LoginRequiredMixin,UserPassesTestMixin, DeleteView):
 
 
 class BlogLogin(LoginView):
-    template_name = 'blog/blog_login.html'
+    template_name = 'blog_login.html'
     next_page = reverse_lazy("blog_list")
 
    
 class BlogLogout(LogoutView):
-    template_name = 'blog/blog_logout.html'
+    template_name = 'blog_logout.html'
 
 def index(request):
     if request.method == "GET":
