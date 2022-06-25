@@ -4,7 +4,7 @@
   <a href="{% url 'blogDetail' user.id %}">Perfil {{user.username}}</a>
 {% else %}
   <a href="{% url 'blogLogin' %}">Entrar</a>
-  <a href="{% url 'blogCreate' %}">Crear Cuenta</a>
+  <a href="{% url 'signup' %}">Crear Cuenta</a>
 {% endif %}
 
 
