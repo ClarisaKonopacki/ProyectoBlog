@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 class SignUpView(SuccessMessageMixin, CreateView):
   template_name = 'CuentaBlog/blog_crear_cuenta.html'
-  success_url = reverse_lazy('blog_login')
+  success_url = reverse_lazy('blogLogin')
   form_class = UserCreationForm
   success_message = "¡¡ Se creo tu perfil satisfactoriamente !!"
 

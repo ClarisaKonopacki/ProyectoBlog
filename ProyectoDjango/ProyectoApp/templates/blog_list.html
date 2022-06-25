@@ -1,10 +1,10 @@
 {% if user.is_authenticated %}
-  <a href="{% url 'blog_logout' %}">Salir</a>
-  <a href="{% url 'blog_create' %}">Nuevo Blog</a>
-  <a href="{% url 'blog_detail' user.id %}">Perfil {{user.username}}</a>
+  <a href="{% url 'blogLogout' %}">Salir</a>
+  <a href="{% url 'blogCreate' %}">Nuevo Blog</a>
+  <a href="{% url 'blogDetail' user.id %}">Perfil {{user.username}}</a>
 {% else %}
-  <a href="{% url 'blog_login' %}">Entrar</a>
-  <a href="{% url 'blog_crear_cuenta' %}">Crear Cuenta</a>
+  <a href="{% url 'blogLogin' %}">Entrar</a>
+  <a href="{% url 'blogCreate' %}">Crear Cuenta</a>
 {% endif %}
 
 
@@ -13,10 +13,10 @@
     {% for blog in object_list %}
     <li>
         
-        <a href="{% url 'blog_detail' ProyectoApp.id %}">{{ProyectoApp.titulo}}</a>
+        <a href="{% url 'blogDetail' ProyectoApp.id %}">{{ProyectoApp.titulo}}</a>
         {% if user.is_authenticated %}
-          <a href="{% url 'blog_delete' ProyectoApp.id %}">Borrar</a>
-          <a href="{% url 'blog_update' ProyectoApp.id %}">Actualizar</a>
+          <a href="{% url 'blogDelete' ProyectoApp.id %}">Borrar</a>
+          <a href="{% url 'blogUpdate' ProyectoApp.id %}">Actualizar</a>
         {% endif %}
     </li>
     {% endfor %}
