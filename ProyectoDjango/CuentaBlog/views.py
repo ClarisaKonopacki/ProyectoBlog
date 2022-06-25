@@ -15,7 +15,7 @@ class SignUpView(SuccessMessageMixin, CreateView):
 class BlogProfile(DetailView):
 
     model = User
-    template_name = "CuentaBlog/blog_detail.html"
+    template_name = "CuentaBlog/user_detail.html"
 
 
 class BlogUpdate(LoginRequiredMixin, UpdateView):
