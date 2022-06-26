@@ -22,7 +22,7 @@ from ProyectoApp import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404
-from ProyectoApp.views import Error404View
+from ProyectoApp.views import Error404View, Error403View, Error500View
 
 
 urlpatterns = [
@@ -33,6 +33,8 @@ urlpatterns = [
    ]
 
 handler404 = Error404View.as_view()
+handler403 = Error403View.as_view()
+handler500 = Error500View.as_view()
 
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

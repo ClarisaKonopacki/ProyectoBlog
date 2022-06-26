@@ -76,3 +76,9 @@ def about(request):
 
 class Error404View(TemplateView):
     template_name = 'error_404.html'
+
+class Error403View(TemplateView):
+    template_name = 'error_403.html'
+
+class Error500View(TemplateView):
+    template_name = 'error_500.html'
