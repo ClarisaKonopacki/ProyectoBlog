@@ -70,4 +70,6 @@ def index(request):
     if request.method == "GET":
         return render(request, 'home.html')
 
-
+def about(request):
+    if request.method == "GET":
+        return render(request, 'about.html')

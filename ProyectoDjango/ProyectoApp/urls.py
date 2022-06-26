@@ -5,7 +5,8 @@ from ProyectoApp import views
 
 
 urlpatterns = [
-    path("index/", views.index, name="index"),
+    path("about/", views.about, name="about"),
+    path("home/", views.index, name="index"),
     path("blog_list/", views.BlogList.as_view(), name="blogList"),
     path("blog_detail/<pk>/", views.BlogDetail.as_view(), name="blogDetail"),
     path("blog_create/", views.BlogCreate.as_view(), name="blogCreate"),
