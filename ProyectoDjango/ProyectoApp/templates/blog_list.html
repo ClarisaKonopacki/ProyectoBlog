@@ -1,10 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+   
+    <title>Document</title>
+    <style>
+      html {
+        font-family:'Montserrat', sans-serif;
+    }
+    
+    body {
+        margin: 0;
+        background-color: #efefef;
+    }
+    
+    header {
+        background-color: #364552;
+        color: white;
+        padding: 2rem 3rem;
+    
+    }
+     header {
+         font-size: 2 rem ;
+         text-align: center;
+     }
+
+    </style>
+     </head>
+
+<body>
+  <header>
+    <h1>Blog Multitopic</h1>
+</header>
+
 {% if user.is_authenticated %}
-  <a href="{% url 'blogLogout' %}">Salir</a>
-  <a href="{% url 'blogCreate' %}">Nuevo Blog</a>
-  <a href="{% url 'blog_profile' user.id %}">Perfil {{user.username}}</a>
+  <a href="{% url 'blogLogout' %}"><button type="submit">Salir</button></a><br>
+  <a href="{% url 'blogCreate' %}"><button type="submit">Nuevo Blog</button></a> <br>
+  <a href="{% url 'blog_profile' user.id %}"><button type="submit">Perfil {{user.username}}</button></a> <br><br>
 {% else %}
-  <a href="{% url 'blogLogin' %}">Entrar</a>
-  <a href="{% url 'signup' %}">Crear Cuenta</a>
+<h2>
+  <a href="{% url 'blogLogin' %}"><button type="submit">Entrar</button></a>
+  <a href="{% url 'signup' %}"><button type="submit">Crear Cuenta</button></a>
+</h2>
 {% endif %}
 
 
@@ -15,11 +51,14 @@
         
         <a href="{% url 'blogDetail' ProyectoApp.id %}">{{ProyectoApp.titulo}}</a>
         {% if user.is_authenticated %}
-          <a href="{% url 'blogDelete' ProyectoApp.id %}">Borrar</a>
-          <a href="{% url 'blogUpdate' ProyectoApp.id %}">Actualizar</a>
+          <a href="{% url 'blogDelete' ProyectoApp.id %}"><button type="submit">Borrar</button></a>
+          <a href="{% url 'blogUpdate' ProyectoApp.id %}"><button type="submit">Actualizar</button></a>
         {% endif %}
     </li>
     {% endfor %}
 {% else %}
   <h1> No hay blogs</h1>
 {% endif %}
+
+</body>
+</html>

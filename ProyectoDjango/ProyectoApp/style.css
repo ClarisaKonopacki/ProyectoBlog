@@ -1,0 +1,41 @@
+
+
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #364552;
+    color: white;
+    padding: 2rem 3rem;
+
+}
+ header {
+     font-size: 2 rem ;
+     text-align: center;
+ }
+
+ footer {
+    background-color: #222;
+    padding: 3rem;
+    color: #fff;
+}
+
+footer section {
+   float: right;
+}
+
+footer p {
+   margin: 0;
+}
+
+footer a {
+   transition: color 0.3s ease;
+   color: #fff;
+   text-decoration: none;
+}
+
+footer a:hover {
+   color: cornflowerblue;
+}

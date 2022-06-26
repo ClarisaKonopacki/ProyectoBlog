@@ -1,4 +1,39 @@
-<a href="{% url 'blogList' %}">Volver a Lista</a>
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <style>
+
+        html {
+            font-family:'Montserrat', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #efefef;
+        }
+        
+        header {
+            background-color: #364552;
+            color: white;
+            padding: 2rem 3rem;
+        
+        }
+         header {
+             font-size: 2 rem ;
+             text-align: center;
+         }
+
+           
+    </style>
+  
+</head>
+<body>
+    <header>
+        <h1>Blog Multitopic</h1>
+    </header>
+
+<a href="{% url 'blogList' %}"><button type="submit">Volver a Lista</button></a>
 <div>
     <h1>{{object.titulo}}</h1>
     <h2>{{object.sub_titulo}}</h2>

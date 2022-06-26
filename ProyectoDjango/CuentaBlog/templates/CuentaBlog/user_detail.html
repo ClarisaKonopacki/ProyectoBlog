@@ -1,11 +1,45 @@
-<a href="{% url 'blogList' %}">Volver a Lista Blogs</a>
-<a href="{% url 'blog_edit' user.id %}">Editar Perfil</a>
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <style>
+
+        html {
+            font-family:'Montserrat', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            background-color: #efefef;
+        }
+        
+        header {
+            background-color: #364552;
+            color: white;
+            padding: 2rem 3rem;
+        
+        }
+         header {
+             font-size: 2 rem ;
+             text-align: center;
+         }
+
+           
+    </style>
+  
+</head>
+<body>
+    <header>
+        <h1>Blog Multitopic</h1>
+    </header>
+
+<a href="{% url 'blogList' %}"> <button type="submit">Volver a Lista Blogs</button></a>
+<a href="{% url 'blog_edit' user.id %}"><button type="submit">Editar Perfil</button></a>
 
 <ul>
-    <li>Nombre: {{object.first_name}}<li>
-    <li>Apellido: {{object.last_name}}<li>
+    <li>Nombre: {{object.first_name}}<li> 
+    <li>Apellido: {{object.last_name}}<li> 
     <li>Correo electronico: {{object.email}} </li>
     <li>Nombre de Usuario: {{object.username}}</li>
 </ul>
 
-<img height="128" src="{{ object.avatar_set.first.image.url }}" />
