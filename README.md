@@ -72,7 +72,7 @@ Hace click en el siguiente link para ver el ejemplo corriendo:
 Actualmente el proyecto sigue activo pero no muestra actualizaciones.
 En caso de haberlas o de que el proyecto no se continue, sera informado por este medio.
 
-##Programadores
+## Programadores
 En caso de tener algun bug, falla o problema con el programa puede comunicarse con cualquiera de los programadores a traves de GitHub: 
 - [Clarisa Konopacki](http://github.com/ClarisaKonopacki "Clarisa Konopacki")
 - [Cristian Medina](https://github.com/CristianM1987 "Cristian Medina")
