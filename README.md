@@ -5,8 +5,10 @@ Introducimos un tipo de blog en el que podes hablar de lo que cada usuario desee
 - Realiza tu primer posteo
 - Explora los posteos de otros usuarios
 
-##Clona nuestro proyecto
+## Clona nuestro proyecto
+
 **Nuestro blog fue probado con Python 3.5.8 y Django 4.0.4**
+
 En windows tiene que abrir una terminal cmd o powershell.
 
 ```PS
