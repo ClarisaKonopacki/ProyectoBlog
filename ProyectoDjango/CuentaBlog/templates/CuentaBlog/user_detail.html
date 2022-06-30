@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html >
-<head>
-    <title>Document</title>
-    <style>
+{% extends "blog_list.html"%}
 
-        html {
-            font-family:'Montserrat', sans-serif;
-        }
-        
-        body {
-            margin: 0;
-            background-color: #efefef;
-        }
-        
-        header {
-            background-color: #364552;
-            color: white;
-            padding: 2rem 3rem;
-        
-        }
-         header {
-             font-size: 2 rem ;
-             text-align: center;
-         }
-
-           
-    </style>
-  
-</head>
-<body>
-    <header>
-        <h1>Blog Multitopic</h1>
-    </header>
+{% block cuerpo %}
 
 <a href="{% url 'blogList' %}"> <button type="submit">Volver a Lista Blogs</button></a>
 <a href="{% url 'blog_edit' user.id %}"><button type="submit">Editar Perfil</button></a>
@@ -43,3 +12,4 @@
     <h3>Nombre de Usuario: {{object.username}}</h3>
 </ul>
 
+{% endblock %}

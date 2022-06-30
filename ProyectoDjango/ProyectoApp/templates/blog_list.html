@@ -32,6 +32,8 @@
     <h1>Blog Multitopic</h1>
 </header>
 
+{% block  cuerpo %}
+   
 {% if user.is_authenticated %}
   <a href="{% url 'blogLogout' %}"><button type="submit">Salir</button></a><br>
   <a href="{% url 'blogCreate' %}"><button type="submit">Nuevo Blog</button></a> <br>
@@ -59,6 +61,8 @@
 {% else %}
   <h1> No hay blogs</h1>
 {% endif %}
+
+{% endblock %}
 
 </body>
 </html>

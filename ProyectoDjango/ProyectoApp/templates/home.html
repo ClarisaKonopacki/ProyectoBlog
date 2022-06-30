@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html >
-<head>
-    <title>Blog Multitopic</title>
-    <style>
+{% extends "blog_list.html" %}
 
-        html {
-            font-family:'Montserrat', sans-serif;
-        }
-        
-        body {
-            margin: 0;
-            background-color: #efefef;
-        }
-        
-        header {
-            background-color: #364552;
-            color: white;
-            padding: 2rem 3rem;
-        
-        }
-         header {
-             font-size: 2 rem ;
-             text-align: center;
-         }
-
-           
-    </style>
-  
-</head>
-<body>
-    <header>
-        <h1>Bienvenidos a Blog Multitopic</h1>
-    </header>
+{% block  cuerpo %}
     
     <h3>¡Podes hablar de lo que sea! Tenemos una gran comunidad</h3>
 
@@ -47,8 +16,7 @@
     
     <a href="{% url 'about' %}">About us</a>
 
-</head>
-
-
 </body>
 </html>
+
+{% endblock %}
