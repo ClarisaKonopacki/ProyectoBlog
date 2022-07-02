@@ -1,3 +1,4 @@
+from tkinter import image_names
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.forms import UserCreationForm
@@ -23,6 +24,8 @@ class BlogUpdate(LoginRequiredMixin, UpdateView):
     model = User
     template_name = "CuentaBlog/user_form.html"
     fields = ["username", "email", "first_name", "last_name"]
-
+    
+    
+    
     def get_success_url(self):
       return reverse_lazy("blog_profile", kwargs={"pk": self.request.user.id})

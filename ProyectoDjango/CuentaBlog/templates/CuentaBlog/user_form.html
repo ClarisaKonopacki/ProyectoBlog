@@ -4,7 +4,7 @@
     
 <a href="{% url 'blog_profile' user.id %}"><button type="submit">Volver a Lista Blogs</button></a>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Guardar">

@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from operator import truediv
 from pyexpat import model
 from statistics import mode
@@ -11,6 +12,7 @@ class BlogModel(models.Model):
     cuerpo = models.TextField()
     autor = models.ForeignKey(User, on_delete=models.CASCADE)
     fecha_creacion = models.DateField(auto_now_add=True)
+    
 
     def __str__(self):
-        return self.titulo
+        return self.titulo 

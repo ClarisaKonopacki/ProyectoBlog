@@ -10,6 +10,11 @@
     <h3>Apellido: {{object.last_name}}</h3> 
     <h3>Correo electronico: {{object.email}} </h3>
     <h3>Nombre de Usuario: {{object.username}}</h3>
+    <h3> Imagen: {{object.avatar_set.first.imagen.url}} <h3> 
+    <input type ="file" name ="txtImagen" id="txtImagen">
+    <input type="submit" value="Guardar"><br>
+    <img height="128" src="{{ object.avatar_set.first.imagen.url }}" />
+    
 </ul>
 
 {% endblock %}

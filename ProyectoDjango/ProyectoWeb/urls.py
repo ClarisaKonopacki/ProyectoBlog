@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from ProyectoApp import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 #Cambios en ruta!!
 
@@ -35,6 +38,5 @@ urlpatterns = [
 handler404 = Error404View.as_view()
 handler403 = Error403View.as_view()
 handler500 = Error500View.as_view()
-
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
